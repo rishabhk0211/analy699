@@ -1,0 +1,61 @@
+#R Code:
+#Population
+Northeast = c(56171329,56111079)
+Midwest = c(68275947,68308744)
+South = c(123815880,124753948)
+West = c(77456021,77993663)
+combined_groups = data.frame(cbind(Northeast,Midwest,South,West))
+summary(combined_groups)
+stacked_groups = stack(combined_groups)
+stacked_groups
+anova_result = aov(values ~ ind, data = stacked_groups)
+summary(anova_result)
+TukeyHSD(anova_result)
+#Adult Population
+Northeast = c(43476609,43429975)
+Midwest = c(52845583,52870968)
+South = c(95833491,96559556)
+West = c(59950960,60367095)
+combined_groups = data.frame(cbind(Northeast,Midwest,South,West))
+summary(combined_groups)
+stacked_groups = stack(combined_groups)
+stacked_groups
+anova_result = aov(values ~ ind, data = stacked_groups)
+summary(anova_result)
+TukeyHSD(anova_result)
+#Internet Usage
+Northeast = c(38473321,38432054)
+Midwest = c(46764113,46786577)
+South = c(84804973,85447482)
+West = c(53051804,53420050)
+combined_groups = data.frame(cbind(Northeast,Midwest,South,West))
+summary(combined_groups)
+stacked_groups = stack(combined_groups)
+stacked_groups
+anova_result = aov(values ~ ind, data = stacked_groups)
+summary(anova_result)
+TukeyHSD(anova_result)
+#Instagram Usage
+Northeast = c(10598084,13276960)
+Midwest = c(12881914,16163162)
+South = c(23360870,29519183)
+West = c(14613958,18454801)
+combined_groups = data.frame(cbind(Northeast,Midwest,South,West))
+summary(combined_groups)
+stacked_groups = stack(combined_groups)
+stacked_groups
+anova_result = aov(values ~ ind, data = stacked_groups)
+summary(anova_result)
+TukeyHSD(anova_result)
+#Obesity Rate
+Northeast = c(12846990,13071728)
+Midwest = c(15615447,15913315)
+South = c(28318030,29062881)
+West = c(17715029,18169530)
+combined_groups = data.frame(cbind(Northeast,Midwest,South,West))
+summary(combined_groups)
+stacked_groups = stack(combined_groups)
+stacked_groups
+anova_result = aov(values ~ ind, data = stacked_groups)
+summary(anova_result)
+TukeyHSD(anova_result)
